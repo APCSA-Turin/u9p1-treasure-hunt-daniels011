@@ -4,22 +4,26 @@ public class Sprite {
     private int x, y;
 
     public Sprite(int x, int y) {
+        this.x = x; //initialises x
+        this.y = y; // initalises y
+    }
+
+    public int getX(){return x;} // returns x
+    public int getY(){return y;} // returns y
+
+    public void setX(int x){ // sets x 
         this.x = x;
+    }
+    public void setY(int y){ // sets y 
         this.y = y;
     }
 
-    public int getX(){return 1;}
-    public int getY(){return 1;}
-
-    public void setX(){}
-    public void setY(){}
-
     public String getCoords(){ //returns the coordinates of the sprite ->"(x,y)"
-        return "";
+        return "(" + x + ","+ y + ")";
     }
 
     public String getRowCol(int size){ //returns the row and column of the sprite -> "[row][col]"
-        return "[][]";
+        return "[" + (size - 1 - y) + "]" + "[" + x + "]";
     }
     
 
